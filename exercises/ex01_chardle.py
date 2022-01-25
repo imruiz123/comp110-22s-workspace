@@ -14,21 +14,24 @@ print("Searching for " + letter + " in " + word)
 
 increment_count = 0
 if (word[0] == letter):
-    print("found at index 0")
+    print(letter + " found at index 0")
     increment_count = increment_count + 1
 if (word[1] == letter): 
-    print("found at index 1")
+    print(letter + " found at index 1")
     increment_count = increment_count + 1
 if (word[2] == letter): 
-    print("found at index 2")
+    print(letter + " found at index 2")
     increment_count = increment_count + 1
 if (word[3] == letter): 
-    print("found at index 3")
+    print(letter + " found at index 3")
     increment_count = increment_count + 1
 if (word[4] == letter): 
-    print("found at index 4")
+    print(letter + " found at index 4")
     increment_count = increment_count + 1
 if increment_count == 0:
-    print("No instances of " + letter + " found in "+ word)
+    print("No instances of " + letter + " found in " + word)
 else:
-    print(increment_count, "instance of " + letter + " found in " + word)
+    if increment_count > 1:
+        print(increment_count, "instances of " + letter + " found in " + word)
+    else:
+        print(increment_count, "instance of " + letter + " found in " + word)
