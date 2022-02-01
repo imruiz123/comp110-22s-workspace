@@ -1,5 +1,4 @@
 """EX02 One-Shot Wordle."""
-
 __author__ = "730335383"
 
 WHITE_BOX: str = "\U00002B1C"
