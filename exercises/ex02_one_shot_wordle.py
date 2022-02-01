@@ -1,52 +1,52 @@
 """EX02 One-Shot Wordle."""
 __author__ = "730335383"
 
-WHITE_BOX: str = "\U00002B1C"
-GREEN_BOX: str = "\U0001F7E9"
-YELLOW_BOX: str = "\U0001F7E8"
-RESULT: str = ""
+white_box: str = "\U00002B1C"
+green_box: str = "\U0001F7E9"
+yellow_box: str = "\U0001F7E8"
+result: str = ""
 
-COUNT: int = 0
-ALTCOUNT: int = 0
+count: int = 0
+altcount: int = 0
 
-NOTMATCH: bool = True
+notmatch: bool = True
 
-SECRET: str = ("python") 
+secret: str = ("python") 
 
-guess = input(f"What is your {len(SECRET)}-letter guess? ") 
+guess = input(f"What is your {len(secret)}-letter guess? ") 
 
-while len(guess) != len(SECRET): 
-    guess = input(f"That was not {len(SECRET)} letters! Try again: ")
+while len(guess) != len(secret): 
+    guess = input(f"That was not {len(secret)} letters! Try again: ")
 
 
-while COUNT < len(guess):
+while count < len(guess):
 
     # reset altcount for new increment 
-    ALTCOUNT = 0
-    if guess[COUNT] == SECRET[COUNT]:
-        RESULT = RESULT + GREEN_BOX
-        NOTMATCH = False
+    altcount = 0
+    if guess[count] == secret[count]:
+        result = result + green_box
+        notmatch = False
     else:
-        NOTMATCH = True
+        notmatch = True
 
-    while NOTMATCH:
-        if guess[COUNT] == SECRET[ALTCOUNT]:
-            RESULT = RESULT + YELLOW_BOX
-            NOTMATCH = False
+    while notmatch:
+        if guess[count] == secret[altcount]:
+            result = result + yellow_box
+            notmatch = False
       
-        ALTCOUNT = ALTCOUNT + 1
+        altcount = altcount + 1
 
-        if ALTCOUNT == 6:
+        if altcount == 6:
             break
 
-    if NOTMATCH:
-        RESULT = RESULT + WHITE_BOX
+    if notmatch:
+        result = result + white_box
         
-    COUNT = COUNT + 1
+    count = count + 1
 
-print(RESULT)
+print(result)
 
-if guess == SECRET: 
-    print("Woo! You got it")
+if guess == secret: 
+    print("Woo! You got it!")
 else: 
-    print("Not quite. Play again soon! ")  
+    print("Not quite. Play again soon!")  
