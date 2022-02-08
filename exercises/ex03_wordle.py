@@ -6,7 +6,7 @@ green_box: str = "\U0001F7E9"
 yellow_box: str = "\U0001F7E8" 
 
 
-def contains_char(word: str, char: str): 
+def contains_char(word: str, char: str) -> bool: 
     """So when its true."""
     assert len(char) == 1 
     count = 0
@@ -35,10 +35,11 @@ def emojified(guess: str, secret: str) -> str:
 
 
 def input_guess(guess_len: int) -> str:
-    guess: str = input("Enter a 5 character word: ")
+    """takes input of user"""
+    guess: str = input(f"Enter a {guess_len} character word: ")
     i: int = len(guess) 
     while i != guess_len:
-        guess = input("That wasn't 5 chars! Try again: ")
+        guess = input(f"That wasn't {guess_len} chars! Try again: ")
         i = len(guess)
     return guess
 
