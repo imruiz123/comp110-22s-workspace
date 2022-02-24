@@ -20,12 +20,13 @@ def only_evens(list1):
 print(only_evens(list1))
 
 
-def sub(list1, int1, int2): 
+def sub(list1, int1, int2):
+    print(list1) 
     list2: list[int] = list() 
     if int1 < 0:
         int1 = 0
     if int2 > len(list1):
-        int2 = len(list1) - 1
+        int2 = len(list1)
     if len(list1) == 0:
         return list2
     for index in list1[int1:int2]:

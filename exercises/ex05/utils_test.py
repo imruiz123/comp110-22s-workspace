@@ -11,7 +11,7 @@ def test_only_evens():
 
 
 def test_sub():
-    assert sub([10, 20, 30, 40], -1, 6) == [10, 20, 30]
+    assert sub([10, 20, 30, 40], 1, 3) == [20,30]
 
 
 def test_concat():
