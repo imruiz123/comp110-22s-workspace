@@ -20,12 +20,13 @@ while len(guess) != len(secret):
 
 
 while count < len(guess):
-
     # reset altcount for new increment 
     altcount = 0
+
     if guess[count] == secret[count]:
         result = result + green_box
         notmatch = False
+
     else:
         notmatch = True
 
