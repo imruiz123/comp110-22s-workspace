@@ -1,4 +1,4 @@
-""" __author__: 730335383"""
+""" __author__: 730335383."""
 
 list1: list[int] = list()
 list0: list[int] = list()
