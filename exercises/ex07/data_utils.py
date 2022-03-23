@@ -52,7 +52,7 @@ def head(first_n: dict[str, list[str]], second_n: int) -> dict[str, list[str]]:
     for column in first_n: 
         whatever: list[str] = []
         other = 0 
-        if len(first_n[column]) < second_n:
+        if len(first_n[column]) <= second_n:
             result[column] = first_n[column] 
         else: 
             while other < second_n: 
@@ -76,6 +76,12 @@ def concat(first_c: dict[str, list[str]], second_c: dict[str, list[str]]) -> dic
     c_whatever: dict[str, list[str]] = {}
     for column in first_c:
         c_whatever[column] = first_c[column]
+    for column in second_c:
+        if column not in c_whatever: 
+            c_whatever[column] = second_c[column] 
+        else: 
+            for item in second_c: 
+                c_whatever[column].append(item)
     
     return c_whatever 
 
