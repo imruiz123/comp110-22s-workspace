@@ -78,3 +78,14 @@ def concat(first_c: dict[str, list[str]], second_c: dict[str, list[str]]) -> dic
         c_whatever[column] = first_c[column]
     
     return c_whatever 
+
+
+def count(last_t: list[str]) -> dict[str, int]:
+    """Last one purr."""
+    last_r: dict[str, int] = {}
+    for item in last_t: 
+        if item not in last_r:  
+            last_r[item] = 1 
+        else: 
+            last_r[item] += 1 
+    return last_r 
