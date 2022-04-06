@@ -41,3 +41,10 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
         result[column] = column_values(row_table, column) 
 
     return result 
+
+
+def head(first_n: dict[str, list[str]]) -> dict[str, list[str]]:
+    """So we are doing something. """
+    
+    result: dict[str, list[str]] = {}
+    return result
